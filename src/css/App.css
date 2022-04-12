@@ -1,0 +1,22 @@
+/**
+ * Global variables
+ */
+
+:root {
+  --header-height: 50px;
+  --footer-height: 50px;
+  --primary-background-color: black;
+  --text-color: #bfbfbf;
+
+  --border-color: #333333;
+
+  --link-color: white;
+  --link-hover-background: #999999;
+  --link-active-background: #808080;
+
+  --header-link-font-size: 16px;
+}
+
+#root {
+  color: var(--text-color);
+}

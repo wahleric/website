@@ -1,0 +1,74 @@
+/**
+ * General header styling
+ */
+
+.header {
+  position: fixed;
+  top: 0;
+  width:  100%;
+  height: var(--header-height);
+  background: var(--primary-background-color);
+  /*border-bottom: 1px solid var(--border-color);*/
+}
+
+/**
+ * Flex CSS to make the header components lay out correctly, and stretch to fill the header height and width
+ */
+
+.header,
+.header-links ul,
+.header-links li {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.header-links {
+  flex: 1;
+}
+
+/**
+ * Header link list styling
+ */
+
+.header-links ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header-links li {
+  width: 100px;
+}
+
+/**
+ * Header link list item styling
+ */
+
+.header-link a {
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0 20px 0 20px;
+  width: 100%;
+  text-align: center;
+  line-height: var(--header-height);
+  color: var(--link-color);
+  font-size: var(--header-link-font-size);
+
+/*  transition: background-color 0.3s linear;
+  -webkit-transition: background-color 0.3s linear;*/
+  transition: font-size 0.2s linear;
+  -webkit-transition: font-size 0.2s linear;
+}
+
+.header-link a:hover {
+  /*background-color: var(--link-hover-background);*/
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.header-link a.active {
+  /*background-color: var(--link-active-background);*/
+  font-size: 22px;
+  font-weight: bold;
+}

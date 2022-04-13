@@ -1,12 +1,23 @@
 import '../css/Card.css';
 
+function cardClicked(callback) {
+	if (callback instanceof Function) {
+		callback();
+	}
+}
+
 function Card(props) {
 	return (
-		<div className="card">
-			<p>This is a card</p>
-			<p>This is the card's title: {props.title}</p>
-			<p>This is the card's image: <img src={props.image} /></p>
-			<p>This is the card's short description: {props.shortDescription}</p>
+		<div className="card" onClick={() => {cardClicked(props.clickCallback)}}>
+			<div className="card-image">
+				<img src={props.image} />
+			</div>
+			<div className="card-title">
+				{props.title}
+			</div>
+			<div className="card-description">
+				{props.description}
+			</div>
 		</div>
 	);
 }

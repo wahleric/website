@@ -8,7 +8,6 @@
   width:  100%;
   height: var(--header-height);
   background: var(--primary-background-color);
-  /*border-bottom: 1px solid var(--border-color);*/
 }
 
 /**
@@ -54,21 +53,21 @@
   line-height: var(--header-height);
   color: var(--link-color);
   font-size: var(--header-link-font-size);
-
-/*  transition: background-color 0.3s linear;
-  -webkit-transition: background-color 0.3s linear;*/
   transition: font-size 0.2s linear;
-  -webkit-transition: font-size 0.2s linear;
-}
-
-.header-link a:hover {
-  /*background-color: var(--link-hover-background);*/
-  font-size: 22px;
-  font-weight: bold;
 }
 
 .header-link a.active {
-  /*background-color: var(--link-active-background);*/
   font-size: 22px;
   font-weight: bold;
+}
+
+/**
+ * Hover styling for devices that support it
+ */
+
+@media (hover) {
+  .header-link a:hover {
+    font-size: 22px;
+    font-weight: bold;
+  }
 }

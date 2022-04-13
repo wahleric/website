@@ -9,14 +9,14 @@ import {
 
 import Home from './Home';
 import About from './About';
-import Work from './Work';
+import Projects from './Projects';
 
 function Body() {
   return (
     <div className="body">
       <Routes>
         <Route path="/about" element={<About />} />
-        <Route path="/work" element={<Work />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </div>

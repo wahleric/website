@@ -5,7 +5,7 @@ function Home() {
 	return (
 		<div className="home">
 			 <Link to="/about">About</Link>
-			 <Link to="/work">Work</Link>
+			 <Link to="/projects">Projects</Link>
 		</div>
 	);
 }

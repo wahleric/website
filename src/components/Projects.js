@@ -1,7 +1,7 @@
-import '../css/Work.css';
+import '../css/Projects.css';
 import Card from '../components/Card'
 
-function Work() {
+function Projects() {
 
 
 	//TODO: Create cards layout and pass projects into that, instead of looping through projects here
@@ -10,12 +10,12 @@ function Work() {
 	console.log(projects);
 
 	return (
-		<div className="work">
+		<div className="projects">
 			{projects.map((project, index) => {
-				return <Card key="{index}" title={project.title} image={project.image} shortDescription={project.shortDescription}/>
+				return <Card key="{index}" title={project.title} image={project.primaryImage} description={project.shortDescription}/>
 			})}
 		</div>
 	);
 }
 
-export default Work;
+export default Projects;

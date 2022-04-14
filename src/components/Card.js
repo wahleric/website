@@ -1,14 +1,14 @@
 import '../css/Card.css';
 
-function cardClicked(callback) {
+function cardClicked(callback, id) {
 	if (callback instanceof Function) {
-		callback();
+		callback(id);
 	}
 }
 
 function Card(props) {
 	return (
-		<div className="card" onClick={() => {cardClicked(props.clickCallback)}}>
+		<div className="card" onClick={() => {cardClicked(props.clickCallback, props.id)}}>
 			<div className="card-image">
 				<img src={props.image} />
 			</div>

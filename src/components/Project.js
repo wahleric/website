@@ -1,4 +1,5 @@
 import '../css/Project.css';
+import { useParams } from 'react-router-dom';
 
 function getImages(projectData) {
 	let images = [];
@@ -13,7 +14,9 @@ function getImages(projectData) {
 }
 
 function Project(props) {
-	let projectData = props.projectData;
+	let { id } = useParams();
+	let projects = require('../data/projects.json');
+	let projectData = projects && projects[id] || {};
 	let images = getImages(projectData);
 
 	return (

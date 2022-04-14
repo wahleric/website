@@ -1,15 +1,14 @@
 import '../css/Projects.css';
-import Card from '../components/Card';
+import Project from '../components/Project';
+import ProjectCards from '../components/ProjectCards';
+import { Routes, Route } from "react-router-dom";
 
 function Projects() {
-	let projects = require('../data/projects.json');
-
 	return (
-		<div className="projects">
-			{projects.map((project, index) => {
-				return <Card key="{index}" title={project.title} image={project.primaryImage} description={project.shortDescription} />
-			})}
-		</div>
+		<Routes>
+			<Route path=":id" element={<Project />} />
+			<Route path="*" element={<ProjectCards />} />
+		</Routes>
 	);
 }
 

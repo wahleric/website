@@ -16,7 +16,7 @@ function Body() {
     <div className="body">
       <Routes>
         <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/*" element={<Projects />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </div>

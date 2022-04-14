@@ -1,0 +1,27 @@
+.project {
+	text-align: center;
+}
+
+.project .field {
+	padding: 5px;
+}
+
+.project .field ul {
+	list-style-position: inside;
+	padding-left: 0;
+	margin-block-end: 0;
+}
+
+.project .field .field-title {
+	font-weight: bold;
+}
+
+.project .field.title .field-title {
+	font-size: 30px;
+}
+
+.project .images img {
+	box-sizing: border-box;
+	width: 30%;
+	padding: 5px;
+}

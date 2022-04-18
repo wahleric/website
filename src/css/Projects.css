@@ -1,0 +1,8 @@
+.projects .field {
+	text-align: center;
+	padding: 10px;
+}
+
+.projects .field.projectslist .card {
+	display: inline-block;
+}

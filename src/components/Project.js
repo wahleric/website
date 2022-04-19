@@ -1,5 +1,5 @@
 import '../css/Project.css';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 
 function getImages(projectData) {
 	let images = [];
@@ -16,9 +16,16 @@ function getImages(projectData) {
 function Project(props) {
 	let { id } = useParams();
 	let projects = require('../data/projects.json');
-	let projectData = projects && projects[id] || {};
-	let images = getImages(projectData);
+	let projectData = projects && projects[id];
 
+	// If the user is trying to access a non-existent project, redirect them to the Projects page
+	if (!projectData) {
+		return (
+			<Navigate replace to="/projects" />
+		);
+	}
+
+	let images = getImages(projectData);
 	return (
 		<div className="project">
 			<div className="field title">

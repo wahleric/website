@@ -7,7 +7,7 @@ import Body from './components/Body';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/website">
         <Header />
         <Body />
     </BrowserRouter>

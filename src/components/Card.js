@@ -4,7 +4,7 @@ function Card(props) {
 	return (
 		<div className="card" onClick={props.onClickCallback}>
 			<div className="card-image">
-				<img src={props.image} alt={props.title} />
+				<img src={`${process.env.PUBLIC_URL}/${props.image}`} alt={props.title} />
 			</div>
 			<div className="card-title">
 				{props.title}

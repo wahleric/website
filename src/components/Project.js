@@ -36,7 +36,7 @@ function Project(props) {
 
 			<div className="field images">
 				{images.map((image, index) => {
-					return <img key={index} className="project-image" src={image}/>
+					return <img key={index} className="project-image" src={image} alt={projectData.title} />
 				})}
 			</div>
 

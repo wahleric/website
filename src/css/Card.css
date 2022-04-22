@@ -2,37 +2,35 @@
 	box-sizing: border-box;
 	max-width: 300px;
 	height: 400px;
-	border: 1px solid white;
-	border-radius: 10px;
-	transition: transform 0.2s ease-in-out, border-width 0.2s ease-in-out;
 	padding: 10px;
-	text-align: center;
 	margin: 20px;
+	border-radius: 10px;
+	text-align: center;
 	overflow: hidden;
+	box-shadow: 0 0 10px white;
+	transition: box-shadow 0.2s;
 }
 
-.card-image {
+.card-field:not(.card-field:first-child) {
+	margin-top: 10px;
+}
+
+.card-field.image {
 	height: 75%;
 }
 
-.card-image img {
+.card-field.image img {
 	width: 100%;
 	height: 100%;
 }
 
-.card-title {
+.card-field.title {
 	font-weight: bold;
-	height: 5%;
-	padding: 10px;
-}
-
-.card-description {
-	height: 20%;
 }
 
 @media (hover) {
 	.card:hover {
-		transform: scale(1.05);
+		box-shadow: 0 0 25px white;
 	}
 }
 
